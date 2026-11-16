@@ -73,10 +73,11 @@ Relevant detections included rule **`5710`** (attempted non-existent SSH user) a
 
 ### Evidence
 
-![Kali Host-only interface and source IP](SOC%20LAB%20PICS/step1_adresses_ssh_attaque/kali%20ip%20.png)
+<img width="635" height="337" alt="kali ip " src="https://github.com/user-attachments/assets/bdb01b9b-8eba-4782-9fe4-4a1f853d29a1" />
 
 *Kali Host-only interface and source IP*
-![Controlled failed SSH authentication from Kali](SOC%20LAB%20PICS/step1_adresses_ssh_attaque/ssh%20attaque%20kali%20.png)
+
+<img width="617" height="160" alt="ssh attaque kali " src="https://github.com/user-attachments/assets/6e7576eb-7ad4-4a6d-885f-d8229a52ac9b" />
 
 *Controlled failed SSH authentication from Kali*
 
@@ -111,16 +112,20 @@ First custom rule: **`100100`**, level 5, identifying individual `[UFW BLOCK]` e
 
 ### Evidence
 
-![Initial UFW status before hardening](SOC%20LAB%20PICS/step2_UFW_network_visibility/UFW_status_inactive.png)
+<img width="938" height="145" alt="UFW_status_inactive" src="https://github.com/user-attachments/assets/5e0d3844-63c1-42c1-b01a-0f5329689104" />
+
 
 *Initial UFW status before hardening*
-![UFW rules added while preserving SSH access](SOC%20LAB%20PICS/step2_UFW_network_visibility/UFW_config_safty%20.png)
+
+<img width="884" height="227" alt="UFW_config_safty " src="https://github.com/user-attachments/assets/a88e9353-4b28-4981-8b32-ef3165452852" />
 
 *UFW rules added while preserving SSH access*
-![Linux kernel journal showing firewall block events](SOC%20LAB%20PICS/step2_UFW_network_visibility/UFW_journal_list_block.png)
+
+<img width="1892" height="534" alt="UFW_journal_list_block" src="https://github.com/user-attachments/assets/fe4dade9-d423-4442-ada9-73279a3b3af9" />
 
 *Linux kernel journal showing firewall block events*
-![Rule 100100 events visible in Wazuh Threat Hunting](SOC%20LAB%20PICS/step2_UFW_network_visibility/wazuh_rule_nmap_scan_verified.png)
+
+<img width="1122" height="460" alt="wazuh_rule_nmap_scan_verified" src="https://github.com/user-attachments/assets/61b15581-ac1d-4b03-bd6f-45fa0e47e253" />
 
 *Rule 100100 events visible in Wazuh Threat Hunting*
 
@@ -156,16 +161,19 @@ The rule was tested using multiple events in **one Wazuh Logtest session** and s
 
 ### Evidence
 
-![Creation of the custom cyberlab-ufw decoder](SOC%20LAB%20PICS/step3_cree_decodeur_structurer%20donner/cree_decodeur.png)
+<img width="669" height="149" alt="cree_decodeur" src="https://github.com/user-attachments/assets/0d3cd7ce-fff7-44e5-ae14-355a0a866a82" />
 
 *Creation of the custom cyberlab-ufw decoder*
-![Wazuh Logtest structured field extraction](SOC%20LAB%20PICS/step3_cree_decodeur_structurer%20donner/structure_un_log.png)
+
+<img width="948" height="463" alt="structure_un_log" src="https://github.com/user-attachments/assets/f01b2338-fe2b-42b1-b0dc-c1864b88ba10" />
 
 *Wazuh Logtest structured field extraction*
-![Definition of repeated-block correlation rule 100101](SOC%20LAB%20PICS/step3_cree_decodeur_structurer%20donner/cree_rule_100101_bloque_same_ip.png)
+
+<img width="836" height="196" alt="cree_rule_100101_bloque_same_ip" src="https://github.com/user-attachments/assets/1ff99789-efbc-442d-b47a-957fbb7b8204" />
 
 *Definition of repeated-block correlation rule 100101*
-![Live correlated level-10 alert in Wazuh](SOC%20LAB%20PICS/step3_cree_decodeur_structurer%20donner/ufw_ip_repeated_test_correct.png)
+
+<img width="939" height="547" alt="ufw_ip_repeated_test_correct" src="https://github.com/user-attachments/assets/a1c83e1d-0bbc-4b68-91d3-6d6b4995c3ec" />
 
 *Live correlated level-10 alert in Wazuh*
 
@@ -200,16 +208,19 @@ nc -vz -w 3 192.168.163.128 22
 
 ### Evidence
 
-![Incident investigation of UFW blocks and SSH log events](SOC%20LAB%20PICS/step4_incident_responce_steps/log_investigation_ubuntu.png)
+<img width="1268" height="368" alt="log_investigation_ubuntu" src="https://github.com/user-attachments/assets/52128aa2-b880-4ce5-a029-5de4a016d293" />
 
 *Incident investigation of UFW blocks and SSH log events*
-![Targeted UFW rule inserted ahead of the SSH allow rule](SOC%20LAB%20PICS/step4_incident_responce_steps/bloquer_kali_de_reseau_confinement_2.png)
+
+<img width="969" height="305" alt="bloquer_kali_de_reseau_confinement_2" src="https://github.com/user-attachments/assets/2559adf5-f89a-4ba5-940a-3a3504b44a40" />
 
 *Targeted UFW rule inserted ahead of the SSH allow rule*
-![Kali SSH connection times out under the manual containment rule](SOC%20LAB%20PICS/step4_incident_responce_steps/kali_blocker.png)
+
+<img width="596" height="86" alt="kali_blocker" src="https://github.com/user-attachments/assets/6e9c2557-a66d-4ec7-a799-1e627990ec70" />
 
 *Kali SSH connection times out under the manual containment rule*
-![Windows SSH test remains successful during Kali containment](SOC%20LAB%20PICS/step4_incident_responce_steps/win_marche_bien.png)
+
+<img width="809" height="174" alt="win_marche_bien" src="https://github.com/user-attachments/assets/6446fe25-c6da-4161-866f-92323db36784" />
 
 *Windows SSH test remains successful during Kali containment*
 
@@ -249,16 +260,19 @@ sudo systemctl reload ssh
 
 ### Evidence
 
-![SSH configuration before hardening](SOC%20LAB%20PICS/step5_linux_ssh_hardening/afficher_params_ssh_ubuntu%20.png)
+<img width="1280" height="135" alt="afficher_params_ssh_ubuntu " src="https://github.com/user-attachments/assets/fa1de59c-5332-48a6-8b18-4af2df380a6b" />
 
 *SSH configuration before hardening*
-![Effective OpenSSH settings after applying the hardening file](SOC%20LAB%20PICS/step5_linux_ssh_hardening/durcir_serveru_ssh.png)
+
+<img width="964" height="305" alt="durcir_serveru_ssh" src="https://github.com/user-attachments/assets/fd1983c4-b601-4753-a682-a7ee4b0e999b" />
 
 *Effective OpenSSH settings after applying the hardening file*
-![Kali password-only SSH attempt rejected](SOC%20LAB%20PICS/step5_linux_ssh_hardening/acceder_par_kali_refuser_utiliser_kle_public.png)
+
+<img width="630" height="124" alt="acceder_par_kali_refuser_utiliser_kle_public" src="https://github.com/user-attachments/assets/e3ea29ab-0e9d-4fba-b501-9947e642002c" />
 
 *Kali password-only SSH attempt rejected*
-![Wazuh still monitoring SSH authentication after hardening](SOC%20LAB%20PICS/step5_linux_ssh_hardening/survaillance_wazuh_ssh.png)
+
+<img width="953" height="447" alt="survaillance_wazuh_ssh" src="https://github.com/user-attachments/assets/fd1cd19e-b6d5-488c-8221-db801796907f" />
 
 *Wazuh still monitoring SSH authentication after hardening*
 
@@ -309,13 +323,15 @@ sudo iptables -L INPUT -n --line-numbers | grep 192.168.163.129
 
 > The supplied Active Response folder contains three screenshots. The final standalone Kali `22 (ssh) open` recovery screenshot can be added later to strengthen the public evidence.
 
-![Wazuh dashboard alert related to blocked traffic and Active Response](SOC%20LAB%20PICS/step6_Wazuh%20Active%20Response/active_scan_blocked.png)
+<img width="938" height="167" alt="active_scan_blocked" src="https://github.com/user-attachments/assets/9dd54153-75ba-4317-b8b7-e966df343e46" />
 
 *Wazuh dashboard alert related to blocked traffic and Active Response*
-![Ubuntu Active Response log: firewall-drop and rule 100101](SOC%20LAB%20PICS/step6_Wazuh%20Active%20Response/active_response_wazuh.png)
+
+<img width="946" height="374" alt="active_response_wazuh" src="https://github.com/user-attachments/assets/c67f25cd-0608-4485-894b-b831b7db0135" />
 
 *Ubuntu Active Response log: firewall-drop and rule 100101*
-![Kali Nmap results followed by timed-out SSH connectivity during Active Response](SOC%20LAB%20PICS/step6_Wazuh%20Active%20Response/auto_bloc_nmap_scan.png)
+
+<img width="644" height="465" alt="auto_bloc_nmap_scan" src="https://github.com/user-attachments/assets/a179b80b-82b5-443c-9925-c391f0c09d08" />
 
 *Kali Nmap results followed by timed-out SSH connectivity during Active Response*
 
